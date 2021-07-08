@@ -1,6 +1,6 @@
 # Cumulus-Linux-3.6
 Step by step installation of cumulus linux
-##Adding and Updating Packages
+## Adding and Updating Packages
 You use the Advanced Packaging Tool (apt) to manage additional applications (in the form of packages) and to install the latest updates.
 
 Before running any 
@@ -13,9 +13,9 @@ apt-get
  apt-get update
 ````
 
-#Warning:-
+## Warning:-
 
-#Network Disruptions When Updating/Upgrading
+## Network Disruptions When Updating/Upgrading
 
 The
 ````
@@ -36,11 +36,11 @@ In some cases, installing new packages with apt-get install might also upgrade a
 
 
 
-#As 
+## As 
 Cumulus Networks recommends you use the -E option with sudo whenever you run any apt-get command. This option preserves your environment variables (such as HTTP proxies) before you install new packages or upgrade your distribution.
 
 
-Updating-->
+## Updating-->
 
 ````
 cumulus@switch:~$ dpkg -l | grep {name of package}
