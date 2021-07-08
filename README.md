@@ -13,3 +13,15 @@ The apt-get upgrade and apt-get install commands cause disruptions to network se
 The apt-get upgrade command might result in services being restarted or stopped as part of the upgrade process.
 The apt-get install command might disrupt core services by changing core service dependency packages.
 In some cases, installing new packages with apt-get install might also upgrade additional existing packages due to dependencies. To view the additional packages that will be installed and/or upgraded before installing, run apt-get install --dry-run.
+
+
+
+
+#As 
+Cumulus Networks recommends you use the -E option with sudo whenever you run any apt-get command. This option preserves your environment variables (such as HTTP proxies) before you install new packages or upgrade your distribution.
+
+
+Updating-->
+
+
+cumulus@switch:~$ dpkg -l | grep {name of package}
