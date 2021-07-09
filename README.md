@@ -205,3 +205,87 @@ To uncomment the repository, remove the # at the start of the line, then save th
 deb http://repo3.cumulusnetworks.com/repo CumulusLinux-3-early-access cumulus
 ````
 
+4.Run 
+````
+apt-get update
+````
+ then install the package and upgrade:
+
+## warning
+````
+**Network Disruptions When Updating/Upgrading**
+
+The `apt-get upgrade` and `apt-get install` commands cause
+disruptions to network services:
+
+  - The `apt-get upgrade` command might result in services being
+    restarted or stopped as part of the upgrade process.
+
+  - The `apt-get install` command might disrupt core services by
+    changing core service dependency packages.
+
+In some cases, installing new packages with `apt-get install` might
+also upgrade additional existing packages due to dependencies. To
+review potential issues before installing, run `apt-get install
+--dry-run`.
+````
+
+
+````
+cumulus@switch:~$ sudo -E apt-get update
+cumulus@switch:~$ sudo -E apt-get install {name of package}
+cumulus@switch:~$ sudo -E apt-get upgrade
+````
+
+## Cumulus Supplemental Repository
+
+Cumulus Networks provides a Supplemental Repository that contains third party applications commonly installed on switches.
+
+The repository is provided for convenience only. You can download and use these applications; however, the applications in this repository are not tested, developed, certified, or supported by Cumulus Networks.
+
+Below is a non-exhaustive list of some of the packages present in the repository:
+1.
+
+````
+htop
+````
+lets you view CPU, memory, and process information.
+
+2.
+````
+scamper
+````
+
+is an ECMP traceroute utility.
+
+3.
+
+````
+mtr
+````
+
+is an ECMP traceroute utility.
+
+4.
+
+````
+dhcpdump
+````
+ is similar to TCPdump but focused only on DHCP traffic.
+
+
+5.
+````
+vim
+````
+
+is a text editor.
+
+6.
+
+````
+fping
+````
+provides a list of targets through textfile to check reachability.
+
+
