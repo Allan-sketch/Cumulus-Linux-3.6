@@ -289,3 +289,113 @@ fping
 provides a list of targets through textfile to check reachability.
 
 
+7.
+````
+Scapy
+````
+is a custom packet generator for testing.
+
+8.
+
+````
+bwm-ng
+````
+is a real-time bandwidth monitor.
+
+9.
+
+````
+iftop
+````
+is a real-time traffic monitor.
+
+10.
+
+````
+tshark
+````
+
+is a CLI version of wireshark.
+
+11.
+
+````
+nmap
+````
+is a network scanning utility.
+
+12.
+
+````
+Minicom
+````
+
+ is a USB/Serial console utility that turns your switch into a terminal server (useful for out of band management switches to provide a console on the dataplane switches in the rack).
+
+13.
+
+````
+apt-cacher-ng
+````
+caches packages for mirroring purposes.
+
+14.
+
+````
+iftrap
+````
+is a ncurses-based traffic visualization utility.
+
+15.
+
+````
+swatch
+````
+
+monitors system activity. It reads a configuration file that contains patterns for which to search and actions to perform when each pattern is found.
+
+16.
+
+````
+dos2unix
+````
+converts line endings from Windows to Unix.
+
+17.
+
+````
+fail2ban
+````
+monitors log files (such as /var/log/auth.log and /var/log/apache/access.log) and temporarily or persistently bans the login of failure-prone IP addresses by updating existing firewall rules. This utility is not hardware accelerated on a Cumulus Linux switch, so only affects the control plane.
+
+## To enable the Supplemental Repository:
+
+1.In a file editor, open the /etc/apt/sources.list file.
+````
+cumulus@leaf01:~$ sudo nano /etc/apt/sources.list
+````
+
+2.Uncomment the following lines:
+
+````
+#deb http://repo3.cumulusnetworks.com/repo Jessie-supplemental upstream
+#deb-src http://repo3.cumulusnetworks.com/repo Jessie-supplemental upstream
+````
+
+3.Update the list of software packages:
+
+````
+cumulus@leaf01:~$ sudo apt-get update -y
+````
+
+4.Install the software in which you are interested:
+
+````
+cumulus@leaf01:~$ sudo apt-get install htop
+````
+
+## Related Information:
+
+1..https://www.debian.org/doc/manuals/debian-faq/pkgtools.en.html
+
+2..man pages for apt-get, dpkg, sources.list, apt_preferences
